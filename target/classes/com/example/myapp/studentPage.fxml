@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myapp.studentController">
+   <ImageView fitHeight="84.0" fitWidth="177.0" layoutX="434.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../kai.png" />
+   </ImageView>
+   <Button fx:id="scheduleButton" layoutX="33.0" layoutY="89.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" text="Расписание" />
+   <Button fx:id="gradeButton" layoutX="33.0" layoutY="124.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" text="Аттестация" />
+   <Button fx:id="teacherInfoButton" layoutX="33.0" layoutY="163.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" text="Преподаватели" />
+   <Button fx:id="sgroupButton" layoutX="33.0" layoutY="200.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" text="Группа" />
+   <TableView fx:id="scheduleTable" layoutX="168.0" layoutY="77.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="295.0" prefWidth="409.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false">
+     <columns>
+         <TableColumn fx:id="dayColumn" prefWidth="75.0" text="День" />
+       <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Время" />
+       <TableColumn fx:id="weekColumn" prefWidth="75.0" text="Неделя" />
+         <TableColumn fx:id="subj_col" prefWidth="101.0" text="Дисциплина" />
+         <TableColumn fx:id="lessonTypeColumn" prefWidth="77.0" text="Вид занятия" />
+         <TableColumn fx:id="roomColumn" prefWidth="77.0" text="Аудитория" />
+         <TableColumn fx:id="buildingColumn" prefWidth="69.0" text="Здание" />
+         <TableColumn fx:id="teacherColumn" prefWidth="51.0186767578125" text="Преподаватель" />
+         <TableColumn fx:id="departmentColumn" prefWidth="75.98126220703125" text="Кафедра" />
+     </columns>
+   </TableView>
+   <TableView fx:id="gradeTable" layoutX="168.0" layoutY="77.0" prefHeight="288.0" prefWidth="409.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false">
+     <columns>
+       <TableColumn fx:id="subjectColumn" prefWidth="89.0" text="Дисциплина" />
+       <TableColumn fx:id="firstattColumn" prefWidth="83.0" text="1 аттестация" />
+         <TableColumn fx:id="secondattColumn" prefWidth="83.0" text="2 аттестация" />
+         <TableColumn fx:id="thirdattColumn" prefWidth="84.0" text="3 аттестация" />
+         <TableColumn fx:id="testColumn" prefWidth="63.0" text="Зачет" />
+         <TableColumn fx:id="examColumn" prefWidth="48.0" text="Экзамен" />
+         <TableColumn fx:id="sumColumn" prefWidth="75.0" text="Итог" />
+     </columns>
+   </TableView>
+   <TableView fx:id="teacherTable" layoutX="168.0" layoutY="77.0" prefHeight="295.0" prefWidth="421.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false">
+     <columns>
+       <TableColumn fx:id="teacherNameColumn" prefWidth="138.0" text="ФИО" />
+       <TableColumn fx:id="subjectTColumn" prefWidth="123.0" text="Дисциплина" />
+         <TableColumn fx:id="lessonTypeTColumn" prefWidth="91.0" text="    Вид &#10;занятия" />
+         <TableColumn fx:id="teacherEmailColumn" prefWidth="67.0" text="Email" />
+     </columns>
+   </TableView>
+   <TableView fx:id="groupInfoTable" layoutX="168.0" layoutY="77.0" prefHeight="295.0" prefWidth="421.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false">
+     <columns>
+       <TableColumn fx:id="studentNameColumn" prefWidth="212.0" text="ФИО" />
+       <TableColumn fx:id="StudentEmailColumn" minWidth="0.0" prefWidth="207.0" text="Email" />
+     </columns>
+   </TableView>
+
+</Pane>

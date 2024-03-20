@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myapp.teacherController">
+   <ImageView fx:id="myImageView" fitHeight="84.0" fitWidth="177.0" layoutX="434.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../kai.png" />
+   </ImageView>
+   <Accordion layoutX="60.0" layoutY="163.0" />
+   <Button fx:id="scheduleTButton" layoutX="38.0" layoutY="84.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" text="Расписание" />
+   <Button fx:id="gradeTButton" layoutX="38.0" layoutY="119.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" text="Аттестация" />
+   <TableView fx:id="sch_Tab" layoutX="177.0" layoutY="78.0" prefHeight="300.0" prefWidth="406.0" visible="false">
+     <columns>
+       <TableColumn fx:id="day_col" prefWidth="75.0" text="День" />
+         <TableColumn fx:id="time_col" prefWidth="75.0" text="Время" />
+       <TableColumn fx:id="group_col" prefWidth="75.0" text="Группа" />
+         <TableColumn fx:id="lesType_col" prefWidth="75.0" text="Вид занятия" />
+         <TableColumn fx:id="sub_col" prefWidth="75.0" text="Дисциплина" />
+         <TableColumn fx:id="room_col" prefWidth="75.0" text="Аудитория" />
+         <TableColumn fx:id="buil_col" prefWidth="75.0" text="Здание" />
+     </columns>
+   </TableView>
+   <TableView fx:id="attTable" editable="true" layoutX="38.0" layoutY="224.0" prefHeight="65.0" prefWidth="544.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false">
+     <columns>
+       <TableColumn fx:id="first_col" prefWidth="90.0" sortable="false" text="1 аттестация" />
+         <TableColumn fx:id="second_col" prefWidth="89.0" sortable="false" text="2 аттестация" />
+         <TableColumn fx:id="third_col" prefWidth="87.0" sortable="false" text="3 аттестация" />
+         <TableColumn fx:id="test_col" prefWidth="76.0" sortable="false" text="Зачет" />
+         <TableColumn fx:id="exam_col" prefWidth="78.0" sortable="false" text="Экзамен" />
+     </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+   </TableView>
+   <TextField fx:id="groupNumberTextField" layoutX="206.0" layoutY="133.0" prefHeight="28.0" prefWidth="138.0" promptText="№ группы" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false" />
+   <ComboBox fx:id="studentComboBox" layoutX="38.0" layoutY="172.0" prefHeight="26.0" prefWidth="377.0" promptText="Студент" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false" visibleRowCount="30" />
+   <ComboBox fx:id="subjBox" layoutX="356.0" layoutY="134.0" prefHeight="26.0" prefWidth="228.0" promptText="Дисциплина" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" visible="false" />
+   <Button fx:id="showButton" layoutX="434.0" layoutY="172.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5;" text="Показать ведомость" visible="false" />
+</Pane>
